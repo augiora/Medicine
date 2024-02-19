@@ -1,4 +1,4 @@
-package indiaMedicineData
+package indiaMedicineData;
 
 import java.util.ArrayList;
 
@@ -15,22 +15,22 @@ public class Tester{
       double yuanexchange=0.087;
       ArrayList<indiaMedicine> medicineList= database.getName();
       for (int i=0; i< medicineList.size(); i++){
-         if((medicinelist.get(i)).equals(nameofmed){
-             if(currencytype.equals("euro"){
-               return ((database.getPriceinrupee())*(euroexchange))}
+         if((medicinelist.get(i)).equals(nameofmed)){
+             if(currencytype.equals("euro")){
+               return ((database.getPriceinrupee())*(euroexchange));
             }
-             else if(currencytype.equals("pound"){
-               return ((database.getPriceinrupee())*(poundexchange))}
-            }
+             else if(currencytype.equals("pound")){
+               return ((database.getPriceinrupee())*(poundexchange));
+               }
             
-            else if(currencytype.equals("yen"){
-               return ((database.getPriceinrupee())*(yenexchange))}
+            else if(currencytype.equals("yen")){
+               return ((database.getPriceinrupee())*(yenexchange));
             }
-            else if(currencytype.equals("dollar"){
-               return ((database.getPriceinrupee())*(dollarexchange))}
+            else if(currencytype.equals("dollar")){
+               return ((database.getPriceinrupee())*(dollarexchange));
             }
-            else if(currencytype.equals("yuan"){
-               return ((database.getPriceinrupee())*(yuanexchange))}
+            else if(currencytype.equals("yuan")){
+               return ((database.getPriceinrupee())*(yuanexchange));
           }
       
       }
@@ -40,8 +40,8 @@ public class Tester{
 
 
 
-   public string ismymeddiscontinued(MedicineDatabase database, String nameofmed){
-       ArrayList<indiaMedicine> medicineList= database.getName();
+      public string ismymeddiscontinued(MedicineDatabase database, String nameofmed){
+      ArrayList<indiaMedicine> medicineList= database.getName();
       for(int i=0;i<medicineList.size();i++){
           if((medicinelist.get(i)).equals(nameofmed){
             boolean notavailable=medicine.get(i).getDiscontinued();
