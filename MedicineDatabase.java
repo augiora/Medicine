@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class MedicineDatabase {
 
-    private ArrayList<indiaMedicine> medicine;
+    private ArrayList<indiaMedicine> medicineList;
     private String dataFileName;
 
     /** Database constructor.  Accomplish the following:
@@ -19,32 +19,28 @@ public class MedicineDatabase {
      */
     public MedicineDatabase(String dataFileName) {
         this.dataFileName = dataFileName;
-        medicine = new ArrayList<indiaMedicine>();
-        ArrayList<String> data = createListOfStringsFromFile(String filename);
+        medicineList = new ArrayList<indiaMedicine>();
+        ArrayList<String> data = createListOfStringsFromFile(dataFileName);
         String [] info= null;
         for(int x= 1; x<data.size();x++){
-        String s= Data.get(x);
+        String s= data.get(x);
         info=s.split(",");
         String medname= info[0];
         double rupeeprice= Double.parseDouble(info[1]);
-        boolean discontinued= Boolean.parseBoolean(info[2]);
+        boolean isdiscontinued= Boolean.parseBoolean(info[2]);
         String manname = info[3];
         String packsize=info[4];
         String[] bothcomps= {info[5],info[6]};
         String comp1=info[5];
         String comp2=info[6];
-            }
-        indiaMedicine stat = new indiaMedicine(medname, rupeeprice, discontinued, manname, 
-        packsize, bothcomps, comp1, comp2);
-        medicine.add(stat);
+            
+        indiaMedicine stat = new indiaMedicine(medname, bothcomps, manname, isdiscontinued, rupeeprice, packsize );
+        medicineList.add(stat);
           }
 
     }
 
-    public ArrayList<indiaMedicine> getMedicine() {
-        return medicine; // Ask me why this is problematic
-    }
-
+    
     /**
      * Transforms the contents of a text file into an arraylist of strings.  Each string represents the
      * contents of a single line from the file (ie. all text up to the newline \n terminator.)

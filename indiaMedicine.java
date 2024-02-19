@@ -2,7 +2,7 @@ public class indiaMedicine {
 	
 	private String name;
 	private String[] composition;
-   private int[]compositionamount 
+   private int[]compositionamount;
 	private String manufacturename;
 	private boolean discontinued;
 	private double priceinrupee;
@@ -20,11 +20,10 @@ public class indiaMedicine {
 	 * @param priceinrupee
     * @param size
 	 */
-	public Medicine(String name, String[] composition, int[] compositionamount, String manufacturename, boolean discontinued, 
+	public indiaMedicine(String name, String[] composition, String manufacturename, boolean discontinued, 
    double priceinrupee, String size) {
 		this.name = name;
 		this.composition = composition;
-      this.compositionamount = compositionamount;
 		this.manufacturename = manufacturename;
 		this.discontinued = discontinued;
 		this.priceinrupee = priceinrupee;
@@ -39,9 +38,6 @@ public class indiaMedicine {
 	}
 	public String[] getComposition() {
 		return composition;
-	}
-	public int[] getCompositionamount() {
-		return compositionamount;
 	}
 	public String getManufacturename() {
 		return manufacturename;
