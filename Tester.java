@@ -35,18 +35,18 @@ public class Tester{
       
       }
    
-   
+     }
    }
 
 
 
-      public string ismymeddiscontinued(MedicineDatabase database, String nameofmed){
+      public String ismymeddiscontinued(MedicineDatabase database, String nameofmed){
       ArrayList<indiaMedicine> medicineList= database.getName();
       for(int i=0;i<medicineList.size();i++){
-          if((medicinelist.get(i)).equals(nameofmed){
+          if((medicinelist.get(i)).equals(nameofmed)){
             boolean notavailable=medicine.get(i).getDiscontinued();
             if (notavailable.equals(true)){
-               return "Your medicine is not available"
+               return "Your medicine is not available";
         
               }
            else{
@@ -99,10 +99,9 @@ public class Tester{
    
    
    
-   public int (MedicineDatabase database, String type){
-         ArrayList<indiaMedicine> medicineList= database.getComposition();
+   public int typeofmed(MedicineDatabase database, String type){
+         ArrayList<indiaMedicine> medicineList= database.getSize();
          count=0;
-         
            for (String chemnames: medicineList){
             if (chemnames.equals(medicineList)){
                count++;
